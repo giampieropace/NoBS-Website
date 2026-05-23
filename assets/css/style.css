@@ -58,6 +58,11 @@ img {
 a {
     word-wrap: break-word;
     overflow-wrap: break-word;
+
+}
+
+a.share-btn:hover {
+    cursor: pointer;
 }
 
 /* md-block specifico */
