@@ -1,7 +1,95 @@
+/* Gestione overflow generale */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Container responsivo */
+.container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+main.container {
+    overflow-x: auto;
+    width: 100%;
+}
+
+/* Contenuti lunghi */
+pre, code, kbd, samp {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+pre {
+    overflow-x: auto;
+    white-space: pre;
+    -webkit-overflow-scrolling: touch;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+/* Tabelle */
+table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+    width: fit-content;
+}
+
+/* Immagini */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Link */
+a {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* md-block specifico */
+md-block, md-span, .markdown-body {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+md-block pre {
+    overflow-x: auto;
+    white-space: pre;
+}
+
+md-block code {
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+    
+    pre, code {
+        font-size: 0.85rem;
+    }
+    
+    table {
+        font-size: 0.85rem;
+    }
 }
 
 header {
@@ -20,18 +108,21 @@ footer {
     justify-content: space-between;
 }
 
-header.container,
-footer.container {
-    max-width: 950px;
-    padding-right: var(--pico-spacing);
-    padding-left: var(--pico-spacing);
-}
+@media (min-width: 768px) {
 
-main.container {
-    max-width: 800px;
-    padding-right: var(--pico-spacing);
-    padding-left: var(--pico-spacing);
-    margin-bottom: 1rem;
+    main.container {
+        max-width: 768px;
+        padding-right: var(--pico-spacing);
+        padding-left: var(--pico-spacing);
+        margin-bottom: 1rem;
+    }
+
+    header.container,
+    footer.container {
+        max-width: 950px;
+        padding-right: var(--pico-spacing);
+        padding-left: var(--pico-spacing);
+    }
 }
 
 footer::before {

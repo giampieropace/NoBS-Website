@@ -6,7 +6,8 @@
     { "label": "Home", "url": "/" },
     { "label": "Blog", "url": "/blog/" },
     { "label": "About", "url": "/about/" },
-    { "label": "Contacts", "url": "/contacts/" }
+    { "label": "Contacts", "url": "/contacts/" },
+    { "label": "Sample Post", "url": "/posts/2026-05-20_markdown-syntax/" }
   ],
   
   "socials": [

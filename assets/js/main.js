@@ -1,0 +1,25 @@
+// Share button with clipboard fallback
+const btn = document.querySelector('.share-btn');
+
+if (!btn) return;
+
+const shareOrCopy = async () => {
+    if (navigator.share) {
+        try {
+            await navigator.share({ title: document.title, url: location.href });
+        } catch (err) {
+            if (err.name !== 'AbortError') console.error(err);
+        }
+    } else {
+        try {
+            await navigator.clipboard.writeText(location.href);
+            const original = btn.textContent;
+            btn.textContent = 'Link copied!';
+            setTimeout(() => btn.textContent = original, 2000);
+        } catch (err) {
+            console.error(err);
+        }
+    }
+};
+
+btn.addEventListener('click', shareOrCopy);
