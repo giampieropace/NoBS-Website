@@ -134,6 +134,11 @@ footer {
     }
 }
 
+details.dropdown > summary + ul {
+    right: 0;
+    left: auto;
+}
+
 #article__actions {
     margin-top: 3rem;
 }
