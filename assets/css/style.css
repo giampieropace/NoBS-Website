@@ -8,6 +8,10 @@ header {
     min-height: 124px;
 }
 
+hgroup a {
+    text-decoration: none;
+}
+
 header,
 footer {
     display: flex;
