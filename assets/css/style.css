@@ -134,6 +134,8 @@ footer {
     }
 }
 
+
+/* menu direction fix */
 @media (max-width: 1280px) {
     details.dropdown > summary + ul {
         right: 0;
