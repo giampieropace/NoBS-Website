@@ -1,3 +1,29 @@
+/* Smooth scroll per tutta la pagina */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Skip-to-content link (accessibilità) */
+.skip-to-content {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    z-index: 9999;
+    padding: 0.75rem 1.5rem;
+    background: var(--pico-primary);
+    color: var(--pico-primary-inverse);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0 0 6px 0;
+}
+
+.skip-to-content:focus {
+    position: fixed;
+    top: 0;
+    outline: 2px solid var(--pico-primary);
+    outline-offset: 2px;
+}
+
 /* Gestione overflow generale */
 html, body {
     overflow-x: hidden;
@@ -19,8 +45,12 @@ body {
 }
 
 main.container {
+    position: relative;
     overflow-x: auto;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* Contenuti lunghi */

@@ -16,6 +16,7 @@
 </head>
 
 <body hx-ext="json-swap" hx-get="/data/sitedata.json" hx-trigger="load" hx-swap="json">
+<a href="#main" class="skip-to-content">Skip to content</a>
 <header hx-get="/components/header.html" hx-trigger="load" hx-swap="innerHTML" class="container" id="header" ></header>
     
 <main class="container" id="main">
@@ -36,10 +37,7 @@
         
     <!-- Container per la paginazione -->
     <div id="content-pagination"></div>
-
-    </main>
-
-
+    
 </main>
 <footer hx-get="/components/footer.html" hx-trigger="load" hx-swap="outerHTML" id="footer" ></footer>
 
